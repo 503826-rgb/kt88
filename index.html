@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>高效翻译与客户管理系统</title>
+    <title>KT 智能拓客与翻译系统</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
-            color: #333;
+            background: #f8f9fa;
+            color: #343a40;
         }
         .container {
-            width: 80%;
+            width: 85%;
+            max-width: 1200px;
             margin: auto;
             overflow: hidden;
             padding: 20px 0;
         }
         header {
-            background: #333;
+            background: #343a40;
             color: #fff;
             padding: 1rem 0;
             text-align: center;
+            border-bottom: 4px solid #667eea;
         }
         header h1 {
             margin: 0;
@@ -32,83 +34,105 @@
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
             text-align: center;
         }
         .hero h2 {
-            font-size: 2.2rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
         }
         .section {
-            padding: 2rem 0;
-            border-bottom: 1px solid #ddd;
+            padding: 3rem 1rem;
+            border-bottom: 1px solid #e9ecef;
         }
-        .section:last-child {
+        .section:last-of-type {
             border-bottom: none;
         }
-        .section h3 {
+        .section-title {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            color: #495057;
         }
-        .features {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
         .feature-card {
             background: #fff;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            width: 30%;
-            min-width: 280px;
-            box-sizing: border-box;
-            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
         .feature-card h4 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: #764ba2;
+            margin-top: 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
-        .scenarios {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
+        .feature-card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+        }
+        .feature-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f1f3f5;
+            display: flex;
+            align-items: center;
+        }
+        .feature-card li:before {
+            content: '✓';
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .feature-card li:last-child {
+            border-bottom: none;
         }
         .cta {
             text-align: center;
-            padding: 3rem 0;
+            padding: 4rem 0;
+            background: #ffffff;
         }
         .cta-button {
             background: #667eea;
             color: white;
-            padding: 15px 30px;
+            padding: 18px 35px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 1.2rem;
-            transition: background 0.3s ease;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: inline-block;
         }
         .cta-button:hover {
             background: #5a67d8;
+            transform: scale(1.05);
         }
         footer {
             text-align: center;
-            padding: 1rem 0;
-            background: #333;
+            padding: 1.5rem 0;
+            background: #343a40;
             color: #fff;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>智能翻译与客户管理系统</h1>
+        <h1>KT 智能拓客与翻译系统</h1>
     </header>
 
     <div class="hero">
@@ -120,44 +144,60 @@
 
     <div class="container">
         <div class="section">
-            <h3>核心功能亮点</h3>
-            <div class="features">
+            <h3 class="section-title">我们的核心优势</h3>
+            <div class="feature-grid">
                 <div class="feature-card">
-                    <h4>客户开发管理</h4>
-                    <p>AI帮你拓客，数据还能可视化看，精准又清晰；可视化数据、AI拓客指令超省心。</p>
+                    <h4>翻译功能优势</h4>
+                    <ul>
+                        <li>AI翻译与多种专业通道支持</li>
+                        <li>语音消息AI识别翻译</li>
+                        <li>语种与国际地区自动识别</li>
+                        <li>支持主流聊天软件与多开</li>
+                        <li>覆盖全球超多国家员工</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <h4>轻松团队管理</h4>
-                    <p>销售数据、风控、AI日报全安排，管理贼轻松；团队状态一手掌握。</p>
+                    <h4>客户开发管理优势</h4>
+                    <ul>
+                        <li>AI指令拓客，可视化数据管理</li>
+                        <li>加人统计工单，标准化客户备注</li>
+                        <li>撞客户检测，跨账号客户管理</li>
+                        <li>加人助手与好友分组支持</li>
+                        <li>快捷回复记忆与快速分享</li>
+                    </ul>
                 </div>
                 <div class="feature-card">
-                    <h4>AI能力拉满</h4>
-                    <p>强模型支持、聊天助手、智能消息生成…助力高效沟通～用过的都说香！</p>
+                    <h4>团队管理功能优势</h4>
+                    <ul>
+                        <li>销售员端与管理视角数据统计</li>
+                        <li>风控系统，保障信息安全</li>
+                        <li>主动式AI日报，自动生成工作总结</li>
+                        <li>管理聊天记录查看</li>
+                        <li>聊天换位思考视角</li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h3>真实场景体验</h3>
-            <div class="scenarios">
-                <p><strong>做客户开发、带团队的宝子看过来！</strong></p>
-                <ul>
-                    <li><strong>谈客户时:</strong> AI指令拓客+可视化数据，精准找客不费劲。</li>
-                    <li><strong>带团队时:</strong> 销售数据统计+风控+AI日报，团队状态一手掌握。</li>
-                    <li><strong>沟通时:</strong> AI聊天助手+智能消息生成，高效又省心～</li>
-                </ul>
+                 <div class="feature-card">
+                    <h4>AI功能优势</h4>
+                    <ul>
+                        <li>支持最新最强语言模型</li>
+                        <li>AI角色塑造，模拟真实对话场景</li>
+                        <li>AI聊天助手，智能建议回答</li>
+                        <li>AI智能生成消息与备注</li>
+                        <li>AI快捷应用，提升操作效率</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="section cta">
-            <h3>准备好体验效率的飞跃了吗？</h3>
-            <p>有需求的赶紧冲，真的很实用！</p>
-            <a href="#" class="cta-button">立即获取</a>
+            <h3 class="section-title">准备好体验效率的飞跃了吗？</h3>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">有需求的赶紧冲，真的很实用！</p>
+            <a href="https://www.kt8899.org/?invite_code=6M97038K" target="_blank" class="cta-button">立即获取</a>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2024 您的公司. All Rights Reserved.</p>
+        <p>&copy; 2024 KT-Tech. All Rights Reserved.</p>
     </footer>
 
 </body>
