@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KT 智能拓客与翻译系统</title>
+    <title>KT 智能拓客 - 跨境获客从未如此简单</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -30,6 +30,22 @@
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        nav {
+            float: right;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #667eea;
         }
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -38,11 +54,12 @@
             text-align: center;
         }
         .hero h2 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
         }
         .section {
             padding: 3rem 1rem;
@@ -56,6 +73,19 @@
             font-size: 2.2rem;
             margin-bottom: 2.5rem;
             color: #495057;
+        }
+        .summary-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.2rem;
+        }
+        .summary-list li {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
         }
         .feature-grid {
             display: grid;
@@ -106,6 +136,19 @@
             padding: 4rem 0;
             background: #ffffff;
         }
+        .invite-code {
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #495057;
+        }
+        .invite-code span {
+            background: #e9ecef;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #764ba2;
+            cursor: pointer;
+        }
         .cta-button {
             background: #667eea;
             color: white;
@@ -132,19 +175,34 @@
 <body>
 
     <header>
-        <h1>KT 智能拓客与翻译系统</h1>
+        <h1>KT 智能拓客</h1>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="blog.html">博客</a>
+        </nav>
     </header>
 
     <div class="hero">
         <div class="container">
-            <h2>让您的工作效率直接起飞！</h2>
-            <p>一个集客户开发、团队管理和顶级AI能力于一体的超赞系统。</p>
+            <h2>🌍 跨境获客太难？消息看不懂？客户管理太乱？</h2>
+            <p>试试 👉 KT智能拓客 🚀</p>
         </div>
     </div>
 
     <div class="container">
         <div class="section">
-            <h3 class="section-title">我们的核心优势</h3>
+            <h3 class="section-title">一站式解决您的所有痛点</h3>
+            <ul class="summary-list">
+                <li>✅ 多语种自动翻译 + 语音识别</li>
+                <li>✅ AI 智能回复，秒变专业销售</li>
+                <li>✅ 客户统一管理，避免撞单</li>
+                <li>✅ 团队协作 & 风控系统，全局掌控++</li>
+            </ul>
+            <p style="text-align: center; font-size: 1.3rem; font-weight: bold; color: #764ba2;">让全球沟通无障碍，助力企业轻松拓客！</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">详细功能一览</h3>
             <div class="feature-grid">
                 <div class="feature-card">
                     <h4>翻译功能优势</h4>
@@ -190,15 +248,28 @@
         </div>
 
         <div class="section cta">
-            <h3 class="section-title">准备好体验效率的飞跃了吗？</h3>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">有需求的赶紧冲，真的很实用！</p>
-            <a href="https://www.kt8899.org/?invite_code=6M97038K" target="_blank" class="cta-button">立即获取</a>
+            <h3 class="section-title">👉 立即体验</h3>
+            <a href="https://www.kt8899.org" target="_blank" class="cta-button">免费试用</a>
+            <p class="invite-code">👉 邀请码 <span id="invite-code" title="点击复制">6M97038K</span> 体验三天</p>
         </div>
     </div>
 
     <footer>
         <p>&copy; 2024 KT-Tech. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const inviteCodeElement = document.getElementById('invite-code');
+        inviteCodeElement.addEventListener('click', () => {
+            navigator.clipboard.writeText(inviteCodeElement.innerText)
+                .then(() => {
+                    alert('邀请码已复制到剪贴板！');
+                })
+                .catch(err => {
+                    console.error('无法复制邀请码: ', err);
+                });
+        });
+    </script>
 
 </body>
 </html>
